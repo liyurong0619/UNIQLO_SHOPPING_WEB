@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+          body{
+        background-image: url(./下載.jpg)
+
+      }
+        .opname{
+            background-color: red;
+            color: white;
+        height:30px;
+        }
+        .opdname{
+            color: white;
+            height:10px;
+
+        }
+        .navBar{
+        list-style-type: none;
+        text-align: center;
+        
+      }
+      .navBar li{
+        display: inline-block;
+        padding: 20px;
+      }
+      .navBar li:hover{
+        background-color: RED;
+      }
+      .navBar li a{
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+      .icon{
+        cursor: pointer;
+            padding : .5rem 2rem;
+            border-radius: 50%;
+            background-image: linear-gradient(white);
+            background-size: 200%;
+            transition:  background 0.01s ease-in-out;
+           font-size: 200px;
+           color: black;
+           
+      }
+
+      
+      .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      background: linear-gradient(to right, rgb(255, 0, 0), white);
+    }
+
+    .marquee {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 10s linear infinite;
+      font-size: 24px;
+      padding: 10px;
+      color: white;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+
+    .carousel-container {
+      position: relative;
+      height: 600px;
+      width: 800px;
+      margin: 50px auto;
+      overflow: hidden;
+    }
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-images img {
+      width: 100%;
+      height: auto;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <IMG src="./下載.png" style="height: 50px; "  width="50px">
+
+    <nav class="navBar">
+        <ul>
+            <li>
+              
+                <a href="./照片/上衣/上衣選單.html">男性の服</a>
+            </li>
+            <li>
+                <a href="./照片/庫子/庫子選單.html">ジーンズ</a>
+            </li>
+            <li>
+                <a href="./照片/外套/外套選單.html">コート</a>
+            </li>
+            <li>
+                <a href="./照片/socks/襪子選單.html">ソックス</a>
+            </li>
+    
+        </ul>
+    </nav>
+
+
+    <!--marquee part-->
+    <div class="marquee-container">
+      <div class="marquee">ユニクロでは全店15％オフ、パンツシリーズを5,000円以上お買い上げで500円分のショッピングギフトがプレゼント中！</div>
+    </div>
+    <a href="./照片/2號夾層/搜尋後.html">
+    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+    </svg>
+    </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="./照片/login.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+      </svg>
+    
+    </a>
+
+
+    <!--carousel   part-->
+
+    <div class="carousel-container">
+      <div class="carousel-images">
+        <img src="./照片/socks/IMG_2524.jpg" alt="Image 1">
+        <img src="./照片/socks/IMG_2555.jpg" alt="Image 2">
+        <img src="./照片/上衣/IMG_2513.jpg" alt="Image 4">
+        <img src="./照片/上衣/IMG_2527.jpg" alt="Image 5">
+        <img src="./照片/上衣/IMG_2531.jpg" alt="Image 6">
+        <img src="./照片/上衣/IMG_2544.jpg" alt="Image 7">
+        <img src="./照片/褲子/IMG_2540.jpg" alt="Image 8">
+        <img src="./照片/小孩子/吉卜力.jpg" alt="Image 9">
+        <img src="./照片/小孩子/寶可夢.jpg" alt="Image 10">
+        <img src="./照片/聯名/IMG_2529.jpg" alt="Image 11">
+        <img src="./照片/褲子/IMG_2548.jpg" alt="Image 12">
+      </div>
+      <button class="carousel-button prev">&#10094;</button>
+      <button class="carousel-button next">&#10095;</button>
+    </div>
+
+
+    <script>
+      const prevButton = document.querySelector('.prev');
+      const nextButton = document.querySelector('.next');
+      const carouselImages = document.querySelector('.carousel-images');
+      const images = document.querySelectorAll('.carousel-images img');
+      let currentIndex = 0;
+    
+      // Function to show the current image based on the index
+      function updateCarousel() {
+        const totalImages = images.length;
+        const offset = -(currentIndex * 100) + '%';
+        carouselImages.style.transform = `translateX(${offset})`;
+      }
+    
+      // Event listener for the previous button
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        updateCarousel();
+      });
+    
+      // Event listener for the next button
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        updateCarousel();
+      });
+    
+      // Optional: Auto cycle every 3 seconds
+      setInterval(() => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        updateCarousel();
+      }, 3000);
+    
+    </script>
+    
+
+
+
+</body>
+
+
+
+</html>

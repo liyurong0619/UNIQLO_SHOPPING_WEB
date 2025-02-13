@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <img src="../下載.png" height="50px" width="50px">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>お客様のカート</h1>
+  <hr>
+  <div id="cart-items"></div>
+  
+  <h3>カート内の商品の合計金額: ￥<span id="total-price">0.00</span></h3>
+  <button id="checkout">商品の合計金額</button>
+  
+  <a href="../照片/2號夾層/搜尋後.html">ショッピングを続ける</a>
+
+  <script src="cart.js"></script>
+
+
+  
+  <button id="clear-cart-button">全部消します</button>
+
+<script>
+  document.getElementById('clear-cart-button').addEventListener('click', function() {
+    // Clear cart from localStorage (or your preferred storage)
+    localStorage.removeItem('cart'); 
+
+    // Update the UI to reflect the cart is empty
+    document.getElementById('cart-items').innerHTML = ''; // If you are displaying the cart
+    alert('Your cart has been cleared.');
+    renderCart();  // Re-render the cart after removing an item
+  });
+</script>
+
+</body>
+</html>
